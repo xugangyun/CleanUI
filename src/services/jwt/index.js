@@ -1,17 +1,19 @@
 import apiClient from '@/services/axios'
 import store from 'store'
-const qs = require('qs')
+// const qs = require('qs')
 
 export async function login(userName, password) {
-  const data1 = {
-    userName,
-    password,
+  const params = {
+    schoolAccount: '',
+    userAccount: userName,
+    password: password,
   }
-  const data = qs.stringify(data1)
+
+  // const s = qs.stringify(params)
   return apiClient({
-    url: '/AUTH/login',
-    method: 'post',
-    data,
+    url: '/school/system/user/login',
+    method: 'get',
+    params,
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
     },

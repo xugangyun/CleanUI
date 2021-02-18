@@ -3,7 +3,7 @@ import store from 'store'
 import { notification } from 'ant-design-vue'
 
 const apiClient = axios.create({
-  baseURL: 'http://testservice.zhengbang.com:8800',
+  baseURL: 'http://schoolserver.ngrok2.xiaomiqiu.cn',
   timeout: 1000 * 60 * 30,
   // headers: { 'X-Custom-Header': 'foobar' }
 })

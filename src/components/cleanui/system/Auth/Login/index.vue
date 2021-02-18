@@ -14,7 +14,7 @@
           <a-input
             size="large"
             placeholder="Email"
-            v-decorator="['email', { initialValue: 'demo@sellpixels.com', rules: [{ required: true, message: 'Please input your username!' }]}]"
+            v-decorator="['email', { initialValue: 'admin', rules: [{ required: true, message: 'Please input your username!' }]}]"
           />
         </a-form-item>
         <a-form-item>
@@ -22,7 +22,7 @@
             size="large"
             placeholder="Password"
             type="password"
-            v-decorator="['password', {initialValue: 'demo123', rules: [{ required: true, message: 'Please input your Password!' }]}]"
+            v-decorator="['password', {initialValue: '123456', rules: [{ required: true, message: 'Please input your Password!' }]}]"
           />
         </a-form-item>
         <a-button
