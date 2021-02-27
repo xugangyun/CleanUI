@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import AuthLayout from '@/layouts/Auth'
+import Auth2Layout from '@/layouts/Auth2'
+
 import MainLayout from '@/layouts/Main'
 import store from '@/store'
 
@@ -36,6 +38,21 @@ const router = new Router({
     // System Pages
     {
       path: '/auth',
+      component: Auth2Layout,
+      redirect: 'auth/login',
+      children: [
+        {
+          path: '/auth/login',
+          meta: {
+            title: 'Sign In',
+          },
+          component: () => import('./views/auth/login'),
+        },
+      ],
+    },
+
+    {
+      path: '/auth',
       component: AuthLayout,
       redirect: 'auth/login',
       children: [
@@ -52,13 +69,6 @@ const router = new Router({
             title: 'Error 500',
           },
           component: () => import('./views/auth/500'),
-        },
-        {
-          path: '/auth/login',
-          meta: {
-            title: 'Sign In',
-          },
-          component: () => import('./views/auth/login'),
         },
         {
           path: '/auth/register',

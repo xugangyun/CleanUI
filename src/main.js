@@ -8,6 +8,9 @@ import VuePageTitle from 'vue-page-title'
 import NProgress from 'vue-nprogress'
 import VueLayers from 'vuelayers'
 import BootstrapVue from 'bootstrap-vue'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+
+import 'swiper/swiper-bundle.css'
 
 import App from './App.vue'
 import router from './router'
@@ -20,6 +23,7 @@ import './registerServiceWorker'
 
 Vue.use(BootstrapVue)
 Vue.use(VueLayers)
+Vue.use(VueAwesomeSwiper)
 
 Vue.use(NProgress)
 Vue.use(VuePageTitle, {
